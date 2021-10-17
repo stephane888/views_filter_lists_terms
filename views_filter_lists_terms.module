@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Contains hierarchical_taxonomy_menu.module.
+ * Contains views_filter_lists_terms.module.
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
@@ -10,8 +10,8 @@ use Drupal\Core\Routing\RouteMatchInterface;
 /**
  * Implements hook_help().
  */
-function hierarchical_taxonomy_menu_help($route_name, RouteMatchInterface $route_match) {
-  if ($route_name === 'help.page.hierarchical_taxonomy_menu') {
+function views_filter_lists_terms_help($route_name, RouteMatchInterface $route_match) {
+  if ($route_name === 'help.page.views_filter_lists_terms') {
     $readme_file = file_exists(__DIR__ . '/README.md') ? __DIR__ . '/README.md' : __DIR__ . '/README.txt';
     if (!file_exists($readme_file)) {
       return NULL;
@@ -35,9 +35,9 @@ function hierarchical_taxonomy_menu_help($route_name, RouteMatchInterface $route
 /**
  * Implements hook_theme().
  */
-function hierarchical_taxonomy_menu_theme($existing, $type, $theme, $path) {
+function views_filter_lists_terms_theme($existing, $type, $theme, $path) {
   return [
-    'hierarchical_taxonomy_menu' => [
+    'views_filter_lists_terms' => [
       'variables' => [
         'menu_tree' => [],
         'route_tid' => NULL,
@@ -53,8 +53,8 @@ function hierarchical_taxonomy_menu_theme($existing, $type, $theme, $path) {
 /**
  * Implements template_preprocess_block().
  */
-function hierarchical_taxonomy_menu_preprocess_block(&$variables) {
-  if ($variables['plugin_id'] == 'hierarchical_taxonomy_menu' &&
+function views_filter_lists_terms_preprocess_block(&$variables) {
+  if ($variables['plugin_id'] == 'views_filter_lists_terms' &&
     $variables['configuration']['label_display'] == 'visible' &&
     $variables['configuration']['dynamic_block_title']
   ) {
@@ -81,8 +81,8 @@ function hierarchical_taxonomy_menu_preprocess_block(&$variables) {
 /**
  * Implements hook_theme_suggestions_HOOK().
  */
-function hierarchical_taxonomy_menu_theme_suggestions_hierarchical_taxonomy_menu(array $variables) {
+function views_filter_lists_terms_theme_suggestions_views_filter_lists_terms(array $variables) {
   if (isset($variables['vocabulary'])) {
-    return ['hierarchical_taxonomy_menu__' . $variables['vocabulary']];
+    return ['views_filter_lists_terms__' . $variables['vocabulary']];
   }
 }

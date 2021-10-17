@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\Tests\hierarchical_taxonomy_menu\Functional;
+namespace Drupal\Tests\views_filter_lists_terms\Functional;
 
 use Drupal\field\Entity\FieldConfig;
 use Drupal\field\Entity\FieldStorageConfig;
@@ -13,7 +13,7 @@ use Drupal\Tests\TestFileCreationTrait;
 /**
  * Tests the Hierarchical Taxonomy Menu images.
  *
- * @group hierarchical_taxonomy_menu
+ * @group views_filter_lists_terms
  */
 class HierarchicalTaxonomyMenuImageTest extends BrowserTestBase {
 
@@ -29,7 +29,7 @@ class HierarchicalTaxonomyMenuImageTest extends BrowserTestBase {
   public static $modules = [
     'block',
     'image',
-    'hierarchical_taxonomy_menu',
+    'views_filter_lists_terms',
   ];
 
   /**
@@ -109,7 +109,7 @@ class HierarchicalTaxonomyMenuImageTest extends BrowserTestBase {
       ],
     ]);
 
-    $block = $this->drupalPlaceBlock('hierarchical_taxonomy_menu', [
+    $block = $this->drupalPlaceBlock('views_filter_lists_terms', [
       'region' => 'content',
       'label' => 'Hierarchical Taxonomy Menu',
       'id' => 'hierarchicaltaxonomymenu',

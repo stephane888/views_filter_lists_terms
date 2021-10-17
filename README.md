@@ -18,10 +18,10 @@ module comes with a Twig template, so you can customize the HTML structure any
 way you want.
 
  * For a full description of the module, visit the project page:
-   https://www.drupal.org/project/hierarchical_taxonomy_menu
+   https://www.drupal.org/project/views_filter_lists_terms
 
  * To submit bug reports and feature suggestions, or to track changes:
-   https://www.drupal.org/project/issues/hierarchical_taxonomy_menu
+   https://www.drupal.org/project/issues/views_filter_lists_terms
 
 
 REQUIREMENTS

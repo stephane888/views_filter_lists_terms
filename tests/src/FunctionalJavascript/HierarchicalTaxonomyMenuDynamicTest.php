@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\Tests\hierarchical_taxonomy_menu\FunctionalJavascript;
+namespace Drupal\Tests\views_filter_lists_terms\FunctionalJavascript;
 
 use Drupal\FunctionalJavascriptTests\WebDriverTestBase;
 use Drupal\taxonomy\Entity\Term;
@@ -10,7 +10,7 @@ use Drupal\Tests\taxonomy\Traits\TaxonomyTestTrait;
 /**
  * Tests the Hierarchical Taxonomy Menu dynamic behaviour.
  *
- * @group hierarchical_taxonomy_menu
+ * @group views_filter_lists_terms
  */
 class HierarchicalTaxonomyMenuDynamicTest extends WebDriverTestBase {
 
@@ -25,7 +25,7 @@ class HierarchicalTaxonomyMenuDynamicTest extends WebDriverTestBase {
   public static $modules = [
     'block',
     'image',
-    'hierarchical_taxonomy_menu',
+    'views_filter_lists_terms',
     'taxonomy',
   ];
 
@@ -136,7 +136,7 @@ class HierarchicalTaxonomyMenuDynamicTest extends WebDriverTestBase {
       }
     }
 
-    $this->block = $this->drupalPlaceBlock('hierarchical_taxonomy_menu', [
+    $this->block = $this->drupalPlaceBlock('views_filter_lists_terms', [
       'region' => 'content',
       'label' => 'Hierarchical Taxonomy Menu',
       'id' => 'hierarchicaltaxonomymenu',

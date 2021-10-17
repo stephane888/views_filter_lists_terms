@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\Tests\hierarchical_taxonomy_menu\Functional;
+namespace Drupal\Tests\views_filter_lists_terms\Functional;
 
 use Drupal\language\Entity\ConfigurableLanguage;
 use Drupal\taxonomy\Entity\Term;
@@ -11,7 +11,7 @@ use Drupal\Tests\taxonomy\Traits\TaxonomyTestTrait;
 /**
  * Tests the Hierarchical Taxonomy Menu block with translated taxonomy terms.
  *
- * @group hierarchical_taxonomy_menu
+ * @group views_filter_lists_terms
  */
 class HierarchicalTaxonomyMenuTranslationTest extends BrowserTestBase {
 
@@ -26,7 +26,7 @@ class HierarchicalTaxonomyMenuTranslationTest extends BrowserTestBase {
   public static $modules = [
     'block',
     'image',
-    'hierarchical_taxonomy_menu',
+    'views_filter_lists_terms',
     'taxonomy',
     'locale',
   ];
@@ -80,7 +80,7 @@ class HierarchicalTaxonomyMenuTranslationTest extends BrowserTestBase {
     $child_term_sr->status = TRUE;
     $child_term_sr->save();
 
-    $block = $this->drupalPlaceBlock('hierarchical_taxonomy_menu', [
+    $block = $this->drupalPlaceBlock('views_filter_lists_terms', [
       'region' => 'content',
       'label' => 'Hierarchical Taxonomy Menu',
       'id' => 'hierarchicaltaxonomymenu',

@@ -8,7 +8,7 @@
 /**
  * Convert config values.
  */
-function hierarchical_taxonomy_menu_update_8001() {
+function views_filter_lists_terms_update_8001() {
   $config_factory = \Drupal::configFactory();
 
   foreach ($config_factory->listAll('block.block.hierarchicaltaxonomymenu') as $block_config_name) {
@@ -27,7 +27,7 @@ function hierarchical_taxonomy_menu_update_8001() {
 /**
  * Convert show_count config values from bool to integer.
  */
-function hierarchical_taxonomy_menu_update_8002() {
+function views_filter_lists_terms_update_8002() {
   $config_factory = \Drupal::configFactory();
 
   foreach ($config_factory->listAll('block.block.hierarchicaltaxonomymenu') as $block_config_name) {

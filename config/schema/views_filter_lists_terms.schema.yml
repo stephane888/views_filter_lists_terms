@@ -1,4 +1,4 @@
-block.settings.hierarchical_taxonomy_menu:
+block.settings.views_filter_lists_terms:
   type: block_settings
   label: 'Hierarchical Taxonomy Menu settings'
   mapping:

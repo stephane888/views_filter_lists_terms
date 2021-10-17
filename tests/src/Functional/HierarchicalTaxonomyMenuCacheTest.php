@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\Tests\hierarchical_taxonomy_menu\Functional;
+namespace Drupal\Tests\views_filter_lists_terms\Functional;
 
 use Drupal\taxonomy\Entity\Term;
 use Drupal\Tests\block\Traits\BlockCreationTrait;
@@ -11,7 +11,7 @@ use Drupal\Tests\taxonomy\Traits\TaxonomyTestTrait;
 /**
  * Tests the Hierarchical Taxonomy Menu block caching.
  *
- * @group hierarchical_taxonomy_menu
+ * @group views_filter_lists_terms
  */
 class HierarchicalTaxonomyMenuCacheTest extends BrowserTestBase {
 
@@ -27,7 +27,7 @@ class HierarchicalTaxonomyMenuCacheTest extends BrowserTestBase {
   public static $modules = [
     'block',
     'image',
-    'hierarchical_taxonomy_menu',
+    'views_filter_lists_terms',
   ];
 
   /**
@@ -65,7 +65,7 @@ class HierarchicalTaxonomyMenuCacheTest extends BrowserTestBase {
       'name' => 'Term 2',
     ]);
 
-    $block = $this->drupalPlaceBlock('hierarchical_taxonomy_menu', [
+    $block = $this->drupalPlaceBlock('views_filter_lists_terms', [
       'region' => 'content',
       'label' => 'Hierarchical Taxonomy Menu',
       'id' => 'hierarchicaltaxonomymenu',

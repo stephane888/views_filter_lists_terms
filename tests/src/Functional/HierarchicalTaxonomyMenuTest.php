@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\Tests\hierarchical_taxonomy_menu\Functional;
+namespace Drupal\Tests\views_filter_lists_terms\Functional;
 
 use Drupal\Tests\block\Traits\BlockCreationTrait;
 use Drupal\Tests\BrowserTestBase;
@@ -8,7 +8,7 @@ use Drupal\Tests\BrowserTestBase;
 /**
  * Tests the Hierarchical Taxonomy Menu.
  *
- * @group hierarchical_taxonomy_menu
+ * @group views_filter_lists_terms
  */
 class HierarchicalTaxonomyMenuTest extends BrowserTestBase {
 
@@ -22,7 +22,7 @@ class HierarchicalTaxonomyMenuTest extends BrowserTestBase {
   public static $modules = [
     'block',
     'image',
-    'hierarchical_taxonomy_menu',
+    'views_filter_lists_terms',
   ];
 
   /**
@@ -52,14 +52,14 @@ class HierarchicalTaxonomyMenuTest extends BrowserTestBase {
     $this->drupalGet('/admin/structure/block');
     $this->clickLink('Place block');
     $this->assertSession()->pageTextContains('Hierarchical Taxonomy Menu');
-    $this->assertSession()->linkByHrefExists('admin/structure/block/add/hierarchical_taxonomy_menu/', 0);
+    $this->assertSession()->linkByHrefExists('admin/structure/block/add/views_filter_lists_terms/', 0);
   }
 
   /**
    * Test that the block can be placed.
    */
   public function testBlockPlacement() {
-    $this->drupalPlaceBlock('hierarchical_taxonomy_menu', [
+    $this->drupalPlaceBlock('views_filter_lists_terms', [
       'region' => 'content',
       'label' => 'Hierarchical Taxonomy Menu',
       'id' => 'hierarchicaltaxonomymenu',
@@ -76,7 +76,7 @@ class HierarchicalTaxonomyMenuTest extends BrowserTestBase {
    * Test the block config form integrity.
    */
   public function testBlockConfigForm() {
-    $this->drupalPlaceBlock('hierarchical_taxonomy_menu', [
+    $this->drupalPlaceBlock('views_filter_lists_terms', [
       'region' => 'content',
       'label' => 'Hierarchical Taxonomy Menu',
       'id' => 'hierarchicaltaxonomymenu',

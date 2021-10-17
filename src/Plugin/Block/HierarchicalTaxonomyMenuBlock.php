@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\hierarchical_taxonomy_menu\Plugin\Block;
+namespace Drupal\views_filter_lists_terms\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Cache\Cache;
@@ -20,7 +20,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  * Provides a 'HierarchicalTaxonomyMenuBlock' block.
  *
  * @Block(
- *  id = "hierarchical_taxonomy_menu",
+ *  id = "views_filter_lists_terms",
  *  admin_label = @Translation("Hierarchical Taxonomy Menu"),
  *  category = @Translation("Menus")
  * )
@@ -611,7 +611,7 @@ class HierarchicalTaxonomyMenuBlock extends BlockBase implements ContainerFactor
     $tree = $this->generateTree($vocabulary_tree_array, $base_term);
 
     return [
-      '#theme' => 'hierarchical_taxonomy_menu',
+      '#theme' => 'views_filter_lists_terms',
       '#menu_tree' => $tree,
       '#route_tid' => $route_tid,
       '#cache' => [
@@ -626,7 +626,7 @@ class HierarchicalTaxonomyMenuBlock extends BlockBase implements ContainerFactor
       '#collapsible' => $this->configuration['collapsible'],
       '#attached' => [
         'library' => [
-          'hierarchical_taxonomy_menu/hierarchical_taxonomy_menu',
+          'views_filter_lists_terms/views_filter_lists_terms',
         ],
         'drupalSettings' => [
           'stayOpen' => $this->configuration['stay_open'],
